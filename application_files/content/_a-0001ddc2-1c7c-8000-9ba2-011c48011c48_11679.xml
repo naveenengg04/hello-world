@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <rule>
+        <name>DEVASSURE_uiObjectsToValidate</name>
+        <uuid>_a-0001ddc2-1c7c-8000-9ba2-011c48011c48_11679</uuid>
+        <description>Slect objects to validate</description>
+        <parentUuid>_a-0001ddc2-1c7c-8000-9ba2-011c48011c48_11548</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>= load(
+  local!fileName,
+  #"SYSTEM_SYSRULES_formLayout"(
+    label: "DEV ASSURE",
+    /*instructions: "",*/
+    firstColumnContents: {
+      #"SYSTEM_SYSRULES_sectionLayout"(
+        firstColumnContents: {
+          #"SYSTEM_SYSRULES_dropdownField"(
+            label: "Select objects to validate",
+            choiceLabels: {
+              "Process Models",
+              "CDT",
+              "DataStores",
+              "Rules",
+              "Constants"
+            },
+            choiceValues: {
+              "processModel",
+              "CDT",
+              "dataStore",
+              "rule",
+              "constant"
+            },
+            value: if(
+              isnull(
+                ri!selectedObjects
+              ),
+              null,
+              ri!selectedObjects
+            ),
+            saveInto: ri!selectedObjects,
+            placeholderLabel: "&lt;-- Please select an object to validate --&gt;",
+            required: true
+          )
+        },
+        secondColumnContents: {
+          #"SYSTEM_SYSRULES_textField"(
+            label: "Application code",
+            instructions: len(
+              ri!appCode
+            ) &amp; " of 255 characters",
+            refreshAfter: "KEYPRESS",
+            value: ri!appCode,
+            saveInto: {
+              a!save(
+                ri!appCode,
+                trim(
+                  save!value
+                )
+              ),
+              a!save(
+                ri!fileName,
+                "b"
+              )
+            },
+            required: true,
+            placeholder: "Each object must have this code as prefix",
+            validations: if(
+              len(
+                ri!appCode
+              ) &gt; 255,
+              "Value may not be longer than 255 characters",
+              null
+            )
+          )
+        }
+      ),
+      with(
+        local!Extension: if(
+          isnull(
+            local!fileName
+          ),
+          "",
+          reverse(
+            split(
+              local!fileName,
+              "."
+            )
+          )[1]
+        ),
+        #"SYSTEM_SYSRULES_sectionLayout"(
+          label: "Application package",
+          isCollapsible: true,
+          firstColumnContents: {
+            #"SYSTEM_SYSRULES_fileUploadField"(
+              label: "Application Package (Zip)",
+              required: true,
+              target: #"_a-0000ddcb-da42-8000-3457-01ef9001ef90_2870",
+              value: ri!application,
+              saveInto: {
+                
+                  ri!application,
+                a!save(
+                  local!fileName,
+                  #"SYSTEM_SYSRULES_fileUploadField"(
+                    value: ri!application
+                  ).uploadedDocumentName
+                )
+              },
+              validations: if(
+                not(
+                  local!Extension = "zip"
+                ),
+                "Please upload a zip file",
+                null
+              )
+            )
+          }
+        )
+      )
+    },
+    buttons: #"SYSTEM_SYSRULES_ButtonLayout"(
+      primaryButtons: {
+        #"SYSTEM_SYSRULES_ButtonWidgetSubmit"(
+          label: "Submit",
+          style: "PRIMARY",
+          saveInto: ri!isCancel
+        )
+      },
+      secondaryButtons: {
+        #"SYSTEM_SYSRULES_ButtonWidgetSubmit"(
+          label: "Cancel",
+          style: "NORMAL",
+          value: true,
+          saveInto: ri!isCancel,
+          skipValidation: true
+        )
+      }
+    ),
+    validations: {}
+  )
+)</definition>
+        <namedTypedValue>
+            <name>isCancel</name>
+            <type>
+                <name>boolean</name>
+                <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+            </type>
+        </namedTypedValue>
+        <namedTypedValue>
+            <name>selectedObjects</name>
+            <type>
+                <name>string</name>
+                <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+            </type>
+            <value/>
+        </namedTypedValue>
+        <namedTypedValue>
+            <name>application</name>
+            <type>
+                <name>CollaborationDocument</name>
+                <namespace>http://www.appian.com/ae/types/2009</namespace>
+            </type>
+        </namedTypedValue>
+        <namedTypedValue>
+            <name>fileName</name>
+            <type>
+                <name>string</name>
+                <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+            </type>
+            <value/>
+        </namedTypedValue>
+        <namedTypedValue>
+            <name>appCode</name>
+            <type>
+                <name>string</name>
+                <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+            </type>
+            <value/>
+        </namedTypedValue>
+        <metadataExpr></metadataExpr>
+        <preferredEditor>interface</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <typedValue>
+        <type>
+            <name>RuleTestConfig?list</name>
+            <namespace>http://www.appian.com/ae/types/2009</namespace>
+        </type>
+        <value>
+            <el>
+                <a:name/>
+                <a:ruleInputTestConfigs>
+                    <a:value xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" xsi:type="xsd:boolean"/>
+                    <a:nameRef>isCancel</a:nameRef>
+                    <a:id/>
+                </a:ruleInputTestConfigs>
+                <a:ruleInputTestConfigs>
+                    <a:value xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xsd:string"/>
+                    <a:nameRef>selectedObjects</a:nameRef>
+                    <a:id/>
+                </a:ruleInputTestConfigs>
+                <a:ruleInputTestConfigs>
+                    <a:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" xsi:type="a:CollaborationDocument"/>
+                    <a:nameRef>application</a:nameRef>
+                    <a:id/>
+                </a:ruleInputTestConfigs>
+                <a:ruleInputTestConfigs>
+                    <a:value xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xsd:string"/>
+                    <a:nameRef>fileName</a:nameRef>
+                    <a:id/>
+                </a:ruleInputTestConfigs>
+                <a:ruleInputTestConfigs>
+                    <a:value xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xsd:string"/>
+                    <a:nameRef>appCode</a:nameRef>
+                    <a:id/>
+                </a:ruleInputTestConfigs>
+                <a:assertions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            </el>
+        </value>
+    </typedValue>
+</contentHaul>
