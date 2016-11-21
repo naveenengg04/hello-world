@@ -19,7 +19,7 @@
                 <name>int</name>
                 <namespace>http://www.w3.org/2001/XMLSchema</namespace>
             </type>
-            <value>50</value>
+            <value>50908</value>
         </typedValue>
     </constant>
     <roleMap public="true">
