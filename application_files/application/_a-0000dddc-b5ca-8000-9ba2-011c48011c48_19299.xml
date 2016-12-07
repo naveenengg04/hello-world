@@ -52,11 +52,15 @@
                 </item>
                 <item>
                     <type>processModelFolder</type>
-                    <uuids/>
+                    <uuids>
+                        <uuid>_g-0000dddc-b5ca-8000-f92f-7f0000014e7a_67</uuid>
+                    </uuids>
                 </item>
                 <item>
                     <type>processModel</type>
-                    <uuids/>
+                    <uuids>
+                        <uuid>0002de04-8987-8000-f92f-7f0000014e7a</uuid>
+                    </uuids>
                 </item>
                 <item>
                     <type>portlet</type>
@@ -229,4 +233,4 @@
             </role>
         </contentRoleMap>
     </roleMap>
-</applicationHaul><!--updated on 2016-11-21T21:27:59.226-->
+</applicationHaul><!--updated on 2016-12-07T13:10:54.171-->
