@@ -60,6 +60,7 @@
                     <type>processModel</type>
                     <uuids>
                         <uuid>0002de04-8987-8000-f92f-7f0000014e7a</uuid>
+                    <uuid>0002de05-14d0-8000-341f-014d98014d98</uuid>
                     </uuids>
                 </item>
                 <item>
@@ -233,4 +234,4 @@
             </role>
         </contentRoleMap>
     </roleMap>
-</applicationHaul><!--updated on 2016-12-07T22:01:05.148-->
+</applicationHaul><!--updated on 2016-12-07T22:34:30.981-->

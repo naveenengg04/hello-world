@@ -1,13 +1,25 @@
-Success (2):
-processModelFolder 58 _g-0000dddc-b5ca-8000-f92f-7f0000014e7a_67 "Automated Deployments"
-processModel 902 0002de04-8987-8000-f92f-7f0000014e7a "POC Process for Demo"
+Success (1):
+processModel 21 0002de05-14d0-8000-341f-014d98014d98 "POC Demo 2"
+
+Referenced precedents that were not exported (1):
+processModelFolder 5 _g-0000dddc-b5ca-8000-f92f-7f0000014e7a_67
 
 Trace:
-2016-12-07 07:12:28.288 DEBUG processModelFolder 58 _g-0000dddc-b5ca-8000-f92f-7f0000014e7a_67 Begin transport.
-2016-12-07 07:12:28.289 DEBUG processModelFolder 58 _g-0000dddc-b5ca-8000-f92f-7f0000014e7a_67 Retrieving object data.
-2016-12-07 07:12:28.292 DEBUG processModelFolder 58 _g-0000dddc-b5ca-8000-f92f-7f0000014e7a_67 Setting uuids of object references.
-2016-12-07 07:12:28.292 DEBUG processModelFolder 58 _g-0000dddc-b5ca-8000-f92f-7f0000014e7a_67 Processing reference: ProcessModelFolder.parentFolderId
-2016-12-07 07:12:28.293 DEBUG processModelFolder 58 _g-0000dddc-b5ca-8000-f92f-7f0000014e7a_67 Processing reference: com.appiancorp.suiteapi.process.ProcessRoleMap@514dfb78[
+2016-12-07 17:02:39.478 DEBUG processModel 21 0002de05-14d0-8000-341f-014d98014d98 Begin transport.
+2016-12-07 17:02:39.479 DEBUG processModel 21 0002de05-14d0-8000-341f-014d98014d98 Retrieving object data.
+2016-12-07 17:02:39.508 DEBUG processModel 21 0002de05-14d0-8000-341f-014d98014d98 Setting uuids of object references.
+2016-12-07 17:02:39.525 DEBUG processModel 21 0002de05-14d0-8000-341f-014d98014d98 Processing reference: ProcessModelHaul.folderId
+2016-12-07 17:02:39.527 DEBUG processModel 21 0002de05-14d0-8000-341f-014d98014d98 Processing reference: ProcessModelHaul.modelDashboardPageId
+2016-12-07 17:02:39.527 DEBUG processModel 21 0002de05-14d0-8000-341f-014d98014d98 Processing reference: ProcessModelHaul.processDashboardPageId
+2016-12-07 17:02:39.527 DEBUG processModel 21 0002de05-14d0-8000-341f-014d98014d98 Processing reference: ProcessModel.emailAttachmentFolderId
+2016-12-07 17:02:39.527 DEBUG processModel 21 0002de05-14d0-8000-341f-014d98014d98 Processing reference: ActivityClassParameter[name=pmID,it=23,v=<null>]
+2016-12-07 17:02:39.528 DEBUG processModel 21 0002de05-14d0-8000-341f-014d98014d98 Processing reference: ActivityClassParameter[name=inMap,it=111,v={}]
+2016-12-07 17:02:39.53 DEBUG processModel 21 0002de05-14d0-8000-341f-014d98014d98 Processing reference: ActivityClassParameter[name=procInheritsPriority,it=1,v=1]
+2016-12-07 17:02:39.53 DEBUG processModel 21 0002de05-14d0-8000-341f-014d98014d98 Processing reference: ActivityClassParameter[name=pmUUID,it=3,v=]
+2016-12-07 17:02:39.53 DEBUG processModel 21 0002de05-14d0-8000-341f-014d98014d98 Processing reference: ActivityClassParameter[name=isAsynchronous,it=26,v=1]
+2016-12-07 17:02:39.53 DEBUG processModel 21 0002de05-14d0-8000-341f-014d98014d98 Processing reference: ActivityClassParameter[name=isTransparent,it=26,v=1]
+2016-12-07 17:02:39.53 DEBUG processModel 21 0002de05-14d0-8000-341f-014d98014d98 Processing reference: ActivityClassParameter[name=inheritSecurity,it=26,v=0]
+2016-12-07 17:02:39.531 DEBUG processModel 21 0002de05-14d0-8000-341f-014d98014d98 Processing reference: com.appiancorp.suiteapi.process.ProcessRoleMap@6fbfae77[
   Role[name=ADMIN_OWNER]
   Role[name=EDITOR]
   Role[name=EXPLICIT_NONMEMBER]
@@ -15,43 +27,12 @@ Trace:
   Role[name=MANAGER]
   Role[name=INITIATOR]
 ]
-2016-12-07 07:12:28.298 DEBUG processModelFolder 58 _g-0000dddc-b5ca-8000-f92f-7f0000014e7a_67 Processing reference: Role[name=ADMIN_OWNER]
-2016-12-07 07:12:28.298 DEBUG processModelFolder 58 _g-0000dddc-b5ca-8000-f92f-7f0000014e7a_67 Processing reference: Role[name=EDITOR]
-2016-12-07 07:12:28.298 DEBUG processModelFolder 58 _g-0000dddc-b5ca-8000-f92f-7f0000014e7a_67 Processing reference: Role[name=EXPLICIT_NONMEMBER]
-2016-12-07 07:12:28.298 DEBUG processModelFolder 58 _g-0000dddc-b5ca-8000-f92f-7f0000014e7a_67 Processing reference: Role[name=VIEWER]
-2016-12-07 07:12:28.298 DEBUG processModelFolder 58 _g-0000dddc-b5ca-8000-f92f-7f0000014e7a_67 Processing reference: Role[name=MANAGER]
-2016-12-07 07:12:28.298 DEBUG processModelFolder 58 _g-0000dddc-b5ca-8000-f92f-7f0000014e7a_67 Processing reference: Role[name=INITIATOR]
-2016-12-07 07:12:28.298 DEBUG processModelFolder 58 _g-0000dddc-b5ca-8000-f92f-7f0000014e7a_67 Exporting binary resources.
-2016-12-07 07:12:28.298 DEBUG processModelFolder 58 _g-0000dddc-b5ca-8000-f92f-7f0000014e7a_67 Serializing object to XML.
-2016-12-07 07:12:28.307 DEBUG processModelFolder 58 _g-0000dddc-b5ca-8000-f92f-7f0000014e7a_67 Object transported.
-2016-12-07 07:12:28.309 DEBUG processModel 902 0002de04-8987-8000-f92f-7f0000014e7a Begin transport.
-2016-12-07 07:12:28.309 DEBUG processModel 902 0002de04-8987-8000-f92f-7f0000014e7a Retrieving object data.
-2016-12-07 07:12:28.328 DEBUG processModel 902 0002de04-8987-8000-f92f-7f0000014e7a Setting uuids of object references.
-2016-12-07 07:12:28.328 DEBUG processModel 902 0002de04-8987-8000-f92f-7f0000014e7a Processing reference: ProcessModelHaul.folderId
-2016-12-07 07:12:28.329 DEBUG processModel 902 0002de04-8987-8000-f92f-7f0000014e7a Processing reference: ProcessModelHaul.modelDashboardPageId
-2016-12-07 07:12:28.329 DEBUG processModel 902 0002de04-8987-8000-f92f-7f0000014e7a Processing reference: ProcessModelHaul.processDashboardPageId
-2016-12-07 07:12:28.329 DEBUG processModel 902 0002de04-8987-8000-f92f-7f0000014e7a Processing reference: ProcessModel.emailAttachmentFolderId
-2016-12-07 07:12:28.33 DEBUG processModel 902 0002de04-8987-8000-f92f-7f0000014e7a Processing reference: ActivityClassParameter[name=pmID,it=23,v=<null>]
-2016-12-07 07:12:28.33 DEBUG processModel 902 0002de04-8987-8000-f92f-7f0000014e7a Processing reference: ActivityClassParameter[name=inMap,it=111,v={}]
-2016-12-07 07:12:28.33 DEBUG processModel 902 0002de04-8987-8000-f92f-7f0000014e7a Processing reference: ActivityClassParameter[name=procInheritsPriority,it=1,v=1]
-2016-12-07 07:12:28.33 DEBUG processModel 902 0002de04-8987-8000-f92f-7f0000014e7a Processing reference: ActivityClassParameter[name=pmUUID,it=3,v=]
-2016-12-07 07:12:28.33 DEBUG processModel 902 0002de04-8987-8000-f92f-7f0000014e7a Processing reference: ActivityClassParameter[name=isAsynchronous,it=26,v=1]
-2016-12-07 07:12:28.33 DEBUG processModel 902 0002de04-8987-8000-f92f-7f0000014e7a Processing reference: ActivityClassParameter[name=isTransparent,it=26,v=1]
-2016-12-07 07:12:28.33 DEBUG processModel 902 0002de04-8987-8000-f92f-7f0000014e7a Processing reference: ActivityClassParameter[name=inheritSecurity,it=26,v=0]
-2016-12-07 07:12:28.33 DEBUG processModel 902 0002de04-8987-8000-f92f-7f0000014e7a Processing reference: com.appiancorp.suiteapi.process.ProcessRoleMap@1a612738[
-  Role[name=ADMIN_OWNER]
-  Role[name=EDITOR]
-  Role[name=EXPLICIT_NONMEMBER]
-  Role[name=VIEWER]
-  Role[name=MANAGER]
-  Role[name=INITIATOR]
-]
-2016-12-07 07:12:28.33 DEBUG processModel 902 0002de04-8987-8000-f92f-7f0000014e7a Processing reference: Role[name=ADMIN_OWNER]
-2016-12-07 07:12:28.33 DEBUG processModel 902 0002de04-8987-8000-f92f-7f0000014e7a Processing reference: Role[name=EDITOR]
-2016-12-07 07:12:28.33 DEBUG processModel 902 0002de04-8987-8000-f92f-7f0000014e7a Processing reference: Role[name=EXPLICIT_NONMEMBER]
-2016-12-07 07:12:28.33 DEBUG processModel 902 0002de04-8987-8000-f92f-7f0000014e7a Processing reference: Role[name=VIEWER]
-2016-12-07 07:12:28.33 DEBUG processModel 902 0002de04-8987-8000-f92f-7f0000014e7a Processing reference: Role[name=MANAGER]
-2016-12-07 07:12:28.33 DEBUG processModel 902 0002de04-8987-8000-f92f-7f0000014e7a Processing reference: Role[name=INITIATOR]
-2016-12-07 07:12:28.33 DEBUG processModel 902 0002de04-8987-8000-f92f-7f0000014e7a Exporting binary resources.
-2016-12-07 07:12:28.33 DEBUG processModel 902 0002de04-8987-8000-f92f-7f0000014e7a Serializing object to XML.
-2016-12-07 07:12:28.349 DEBUG processModel 902 0002de04-8987-8000-f92f-7f0000014e7a Object transported.
+2016-12-07 17:02:39.531 DEBUG processModel 21 0002de05-14d0-8000-341f-014d98014d98 Processing reference: Role[name=ADMIN_OWNER]
+2016-12-07 17:02:39.531 DEBUG processModel 21 0002de05-14d0-8000-341f-014d98014d98 Processing reference: Role[name=EDITOR]
+2016-12-07 17:02:39.531 DEBUG processModel 21 0002de05-14d0-8000-341f-014d98014d98 Processing reference: Role[name=EXPLICIT_NONMEMBER]
+2016-12-07 17:02:39.531 DEBUG processModel 21 0002de05-14d0-8000-341f-014d98014d98 Processing reference: Role[name=VIEWER]
+2016-12-07 17:02:39.531 DEBUG processModel 21 0002de05-14d0-8000-341f-014d98014d98 Processing reference: Role[name=MANAGER]
+2016-12-07 17:02:39.531 DEBUG processModel 21 0002de05-14d0-8000-341f-014d98014d98 Processing reference: Role[name=INITIATOR]
+2016-12-07 17:02:39.531 DEBUG processModel 21 0002de05-14d0-8000-341f-014d98014d98 Exporting binary resources.
+2016-12-07 17:02:39.531 DEBUG processModel 21 0002de05-14d0-8000-341f-014d98014d98 Serializing object to XML.
+2016-12-07 17:02:39.597 DEBUG processModel 21 0002de05-14d0-8000-341f-014d98014d98 Object transported.
