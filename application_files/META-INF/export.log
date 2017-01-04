@@ -1,38 +1,31 @@
 Success (1):
-processModel 21 0002de05-14d0-8000-341f-014d98014d98 "POC Demo 2"
+content 19673 _a-0000dddc-b5ca-8000-9ba2-011c48011c48_20385 "POC_Expression_Rule"
 
 Referenced precedents that were not exported (1):
-processModelFolder 5 _g-0000dddc-b5ca-8000-f92f-7f0000014e7a_67
+content 18958 _a-0000dddc-b5ca-8000-9ba2-011c48011c48_19300
 
 Trace:
-2016-12-07 17:02:39.478 DEBUG processModel 21 0002de05-14d0-8000-341f-014d98014d98 Begin transport.
-2016-12-07 17:02:39.479 DEBUG processModel 21 0002de05-14d0-8000-341f-014d98014d98 Retrieving object data.
-2016-12-07 17:02:39.508 DEBUG processModel 21 0002de05-14d0-8000-341f-014d98014d98 Setting uuids of object references.
-2016-12-07 17:02:39.525 DEBUG processModel 21 0002de05-14d0-8000-341f-014d98014d98 Processing reference: ProcessModelHaul.folderId
-2016-12-07 17:02:39.527 DEBUG processModel 21 0002de05-14d0-8000-341f-014d98014d98 Processing reference: ProcessModelHaul.modelDashboardPageId
-2016-12-07 17:02:39.527 DEBUG processModel 21 0002de05-14d0-8000-341f-014d98014d98 Processing reference: ProcessModelHaul.processDashboardPageId
-2016-12-07 17:02:39.527 DEBUG processModel 21 0002de05-14d0-8000-341f-014d98014d98 Processing reference: ProcessModel.emailAttachmentFolderId
-2016-12-07 17:02:39.527 DEBUG processModel 21 0002de05-14d0-8000-341f-014d98014d98 Processing reference: ActivityClassParameter[name=pmID,it=23,v=<null>]
-2016-12-07 17:02:39.528 DEBUG processModel 21 0002de05-14d0-8000-341f-014d98014d98 Processing reference: ActivityClassParameter[name=inMap,it=111,v={}]
-2016-12-07 17:02:39.53 DEBUG processModel 21 0002de05-14d0-8000-341f-014d98014d98 Processing reference: ActivityClassParameter[name=procInheritsPriority,it=1,v=1]
-2016-12-07 17:02:39.53 DEBUG processModel 21 0002de05-14d0-8000-341f-014d98014d98 Processing reference: ActivityClassParameter[name=pmUUID,it=3,v=]
-2016-12-07 17:02:39.53 DEBUG processModel 21 0002de05-14d0-8000-341f-014d98014d98 Processing reference: ActivityClassParameter[name=isAsynchronous,it=26,v=1]
-2016-12-07 17:02:39.53 DEBUG processModel 21 0002de05-14d0-8000-341f-014d98014d98 Processing reference: ActivityClassParameter[name=isTransparent,it=26,v=1]
-2016-12-07 17:02:39.53 DEBUG processModel 21 0002de05-14d0-8000-341f-014d98014d98 Processing reference: ActivityClassParameter[name=inheritSecurity,it=26,v=0]
-2016-12-07 17:02:39.531 DEBUG processModel 21 0002de05-14d0-8000-341f-014d98014d98 Processing reference: com.appiancorp.suiteapi.process.ProcessRoleMap@6fbfae77[
-  Role[name=ADMIN_OWNER]
-  Role[name=EDITOR]
-  Role[name=EXPLICIT_NONMEMBER]
-  Role[name=VIEWER]
-  Role[name=MANAGER]
-  Role[name=INITIATOR]
+2017-01-04 15:59:14.009 DEBUG content 19673 _a-0000dddc-b5ca-8000-9ba2-011c48011c48_20385 Begin transport.
+2017-01-04 15:59:14.009 DEBUG content 19673 _a-0000dddc-b5ca-8000-9ba2-011c48011c48_20385 Retrieving object data.
+2017-01-04 15:59:14.02 DEBUG content 19673 _a-0000dddc-b5ca-8000-9ba2-011c48011c48_20385 Setting uuids of object references.
+2017-01-04 15:59:14.02 DEBUG content 19673 _a-0000dddc-b5ca-8000-9ba2-011c48011c48_20385 Processing reference: [Content:id=19672,versionId=-1,name=POC_Expression_Rule,description=Sample rule to test,type=32,subtype=1,uuid=_a-0000dddc-b5ca-8000-9ba2-011c48011c48_20385,parent=18958,parentName=Automated Deployments,parentType=2,log=19673,logName=POC_Expression_Rule,state=255,visibility=35,security=15,creator=naveen.panchumarthi@wipro.com,createdTimestamp=2017-01-04 15:58:52.0,updatedTimestamp=2017-01-04 15:58:52.0,size=0,lockedBy=ANONYMOUS,changesRequireApproval=false,attributes={dep_rules=[Ljava.lang.Long;@ea81e53, system=0, preferredEditor=legacy, hidden=0, ruletype=1, dep_functions=[Ljava.lang.String;@45abef46, definition=true(), dep_types=[Ljava.lang.String;@dc07683, parameters=[Lcom.appiancorp.suiteapi.process.TypedVariable;@4954b2b0, dep_variables=[[Ljava.lang.String;@740674f},partition=2,partitionName=/usr/local/appian/ae/_admin/accdocs2]
+2017-01-04 15:59:14.021 DEBUG content 19673 _a-0000dddc-b5ca-8000-9ba2-011c48011c48_20385 Processing reference: FreeformRule.forum
+2017-01-04 15:59:14.021 DEBUG content 19673 _a-0000dddc-b5ca-8000-9ba2-011c48011c48_20385 Processing reference: FreeformRule.parent
+2017-01-04 15:59:14.028 DEBUG content 19673 _a-0000dddc-b5ca-8000-9ba2-011c48011c48_20385 Processing reference: com.appiancorp.suiteapi.content.ContentRoleMap@3af03e94[
+  ContentRole[name=readers,inherit=true,allowForAll=false]
+  ContentRole[name=authors,inherit=true,allowForAll=false]
+  ContentRole[name=administrators,inherit=true,allowForAll=false]
+  ContentRole[name=denyReaders,inherit=false,allowForAll=false]
+  ContentRole[name=denyAuthors,inherit=false,allowForAll=false]
+  ContentRole[name=denyAdministrators,inherit=false,allowForAll=false]
+  securityVector=15:SEC_PUBLIC=true,SEC_CREATOR_ADMIN=false,SEC_INH_ADMIN=true,SEC_INH_EDITOR=true,SEC_INH_VIEWER=true,SEC_ALL_ADMIN=false,SEC_ALL_EDITOR=false,SEC_ALL_VIEWER=false
 ]
-2016-12-07 17:02:39.531 DEBUG processModel 21 0002de05-14d0-8000-341f-014d98014d98 Processing reference: Role[name=ADMIN_OWNER]
-2016-12-07 17:02:39.531 DEBUG processModel 21 0002de05-14d0-8000-341f-014d98014d98 Processing reference: Role[name=EDITOR]
-2016-12-07 17:02:39.531 DEBUG processModel 21 0002de05-14d0-8000-341f-014d98014d98 Processing reference: Role[name=EXPLICIT_NONMEMBER]
-2016-12-07 17:02:39.531 DEBUG processModel 21 0002de05-14d0-8000-341f-014d98014d98 Processing reference: Role[name=VIEWER]
-2016-12-07 17:02:39.531 DEBUG processModel 21 0002de05-14d0-8000-341f-014d98014d98 Processing reference: Role[name=MANAGER]
-2016-12-07 17:02:39.531 DEBUG processModel 21 0002de05-14d0-8000-341f-014d98014d98 Processing reference: Role[name=INITIATOR]
-2016-12-07 17:02:39.531 DEBUG processModel 21 0002de05-14d0-8000-341f-014d98014d98 Exporting binary resources.
-2016-12-07 17:02:39.531 DEBUG processModel 21 0002de05-14d0-8000-341f-014d98014d98 Serializing object to XML.
-2016-12-07 17:02:39.597 DEBUG processModel 21 0002de05-14d0-8000-341f-014d98014d98 Object transported.
+2017-01-04 15:59:14.028 DEBUG content 19673 _a-0000dddc-b5ca-8000-9ba2-011c48011c48_20385 Processing reference: ContentRole[name=readers,inherit=true,allowForAll=false]
+2017-01-04 15:59:14.028 DEBUG content 19673 _a-0000dddc-b5ca-8000-9ba2-011c48011c48_20385 Processing reference: ContentRole[name=authors,inherit=true,allowForAll=false]
+2017-01-04 15:59:14.028 DEBUG content 19673 _a-0000dddc-b5ca-8000-9ba2-011c48011c48_20385 Processing reference: ContentRole[name=administrators,inherit=true,allowForAll=false]
+2017-01-04 15:59:14.029 DEBUG content 19673 _a-0000dddc-b5ca-8000-9ba2-011c48011c48_20385 Processing reference: ContentRole[name=denyReaders,inherit=false,allowForAll=false]
+2017-01-04 15:59:14.029 DEBUG content 19673 _a-0000dddc-b5ca-8000-9ba2-011c48011c48_20385 Processing reference: ContentRole[name=denyAuthors,inherit=false,allowForAll=false]
+2017-01-04 15:59:14.029 DEBUG content 19673 _a-0000dddc-b5ca-8000-9ba2-011c48011c48_20385 Processing reference: ContentRole[name=denyAdministrators,inherit=false,allowForAll=false]
+2017-01-04 15:59:14.029 DEBUG content 19673 _a-0000dddc-b5ca-8000-9ba2-011c48011c48_20385 Exporting binary resources.
+2017-01-04 15:59:14.029 DEBUG content 19673 _a-0000dddc-b5ca-8000-9ba2-011c48011c48_20385 Serializing object to XML.
+2017-01-04 15:59:14.053 DEBUG content 19673 _a-0000dddc-b5ca-8000-9ba2-011c48011c48_20385 Object transported.
